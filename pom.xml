@@ -1311,7 +1311,7 @@
             <plugin>
                 <groupId>io.takari.maven.plugins</groupId>
                 <artifactId>provisio-maven-plugin</artifactId>
-                <version>0.1.40</version>
+                <version>0.1.56</version>
                 <extensions>true</extensions>
             </plugin>
 
