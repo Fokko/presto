@@ -1,0 +1,43 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.microsoft.sqlserver:mssql-jdbc
+    versions:
+    - 9.1.1.jre15-preview
+    - 9.2.0.jre15
+    - 9.2.1.jre15
+    - 9.3.0.jre15-preview
+  - dependency-name: org.elasticsearch.client:elasticsearch-rest-client
+    versions:
+    - 7.11.2
+    - 7.12.0
+  - dependency-name: org.elasticsearch.client:elasticsearch-rest-high-level-client
+    versions:
+    - 7.11.2
+    - 7.12.0
+  - dependency-name: org.elasticsearch:elasticsearch
+    versions:
+    - 7.11.2
+    - 7.12.0
+  - dependency-name: redis.clients:jedis
+    versions:
+    - 3.5.1
+    - 3.5.2
+  - dependency-name: org.apache.kafka:kafka_2.12
+    versions:
+    - 2.7.0
+  - dependency-name: org.apache.logging.log4j:log4j-core
+    versions:
+    - 2.14.0
+  - dependency-name: org.apache.logging.log4j:log4j-api
+    versions:
+    - 2.14.0
+  - dependency-name: org.ow2.asm:asm
+    versions:
+    - "9.0"
