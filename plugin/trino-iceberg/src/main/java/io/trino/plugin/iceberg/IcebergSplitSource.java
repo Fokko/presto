@@ -194,6 +194,8 @@ public class IcebergSplitSource
             closer.register(fileScanTaskIterable);
             this.fileScanTaskIterator = fileScanTaskIterable.iterator();
             closer.register(fileScanTaskIterator);
+            // TODO: this is a workaround until the NPE in https://github.com/apache/iceberg/pull/6322 is fixed
+            isFinished();
         }
 
         TupleDomain<IcebergColumnHandle> dynamicFilterPredicate = dynamicFilter.getCurrentPredicate()

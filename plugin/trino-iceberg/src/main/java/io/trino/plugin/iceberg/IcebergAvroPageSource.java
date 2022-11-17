@@ -91,6 +91,8 @@ public class IcebergAvroPageSource
                 .collect(toImmutableMap(Types.NestedField::name, Types.NestedField::type));
         pageBuilder = new PageBuilder(columnTypes);
         recordIterator = avroReader.iterator();
+        // TODO: this is a workaround until the NPE in https://github.com/apache/iceberg/pull/6322 is fixed
+        isFinished();
     }
 
     private boolean isIndexColumn(int column)

@@ -406,6 +406,7 @@
                         <ignoredResourcePattern>about.html</ignoredResourcePattern>
                         <ignoredResourcePattern>iceberg-build.properties</ignoredResourcePattern>
                         <ignoredResourcePattern>mozilla/public-suffix-list.txt</ignoredResourcePattern>
+                        <ignoredResourcePattern>google/protobuf/.*\.proto$</ignoredResourcePattern>
                     </ignoredResourcePatterns>
                 </configuration>
             </plugin>
